@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --error-color: #d32f2f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin-bottom:-10px;
+  padding-left: 0;
+  width: 90%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.logo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #33415c;
+  text-align: left;
+  padding-left: 0;
+}
+
+/* Form layout classes */
+.form-wrapper {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.form-column {
+  width: 48%;
+  position: relative;
+}
+
+.form-column:not(:first-child) {
+  margin-left: 4%;
+}
+
+.form-field {
+  position: relative;
+}
+
+/* Label styling */
+p.udise-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+  position: relative;
+}
+
+.required {
+  color: var(--error-color);
+  margin-left: 2px;
+}
+
+/* UDISE input */
+input#udise {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #C6C6C6;
+  border-radius: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: #222;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* Common input/select styles */
+.common-input,
+select#schoolCategory,
+select#activity,
+select#district {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #C6C6C6;
+  border-radius: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-top: 5px;
+  color: #222;
+  font-size: 16px;
+  background-color: white;
+}
+
+/* Error message styling */
+.error-message {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Tablet & below */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  header {
+    margin-right: 0;
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-column {
+    width: 100%;
+  }
+
+  .form-column:not(:first-child) {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .logo {
+    font-size: 24px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  p.udise-label {
+    font-size: 15px;
+  }
+
+  input#udise,
+  .common-input,
+  select#schoolCategory,
+  select#activity,
+  select#district {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
